@@ -1,86 +1,68 @@
-// alert('Mesaj!');
+const ex = parseInt(prompt("misal nömrəsini seçin (1,2,3): "));
 
-// console.log(confirm('Are you sure?'));
-// let name;
 
-let a=prompt('a-ni daxil edin:');
-let b=prompt('b-ni daxil edin:');
+// 1ci misal
+if (ex === 1) {
+    alert("Üçbucaq düzəltməyin mümkünlüyü yoxlanması üçün 3 tərəf daxil edin.")
+    const a = parseInt(prompt("1ci tərəf: "));
+    const b = parseInt(prompt("2ci tərəf: "));
+    const c = parseInt(prompt("3cü tərəf: "));
 
-let c=a/b;
-if(b!=0)
-{
-    c=a/b;  
-
-    if(c<0)
-    {
-        alert('cavab '+c+' ,menfideir!');
-    }
-    else if(c==0)
-    {
-        alert('cavab '+c);
-    }
-    else{
-        alert('cavab '+c+' ,musbetdir!');
+    if ((a + b) < c || (a + c) < b || (b + c) < a) {
+        console.log("mümkün deyil");
+        alert("mümkün deyil");
+    } else {
+        console.log("mümkündür");
+        alert("mümkündür");
     }
 }
-else
-{
-    alert('0-bolme mumkun deyil!');
+
+// 2ci misal
+else if (ex == 2) {
+    let day = parseInt(prompt("Həftənin gününün nömrəsini daxil edin:"));
+    switch (day) {
+        case 1:
+            alert("Bazarertəsi");
+            break;
+        case 2:
+            alert("Çərşənbə axşamı");
+            break;
+        case 3:
+            alert("Çərşənbə");
+            break;
+        case 4:
+            alert("Cümə axşamı");
+            break;
+        case 5:
+            alert("Cümə");
+            break;
+        case 6:
+            alert("Şənbə");
+            break;
+        case 7:
+            alert("Bazar");
+            break;
+        default:
+            alert("Həftənin 7 günü olur")
+    }
 }
 
-// if(confirm('Ureyin var sisteme girmeye?'))
-// {
-//     name=prompt('Adinizi daxil edin'); 
-   
-//     alert('Bura gelenler geri donmedi,'+name+'!');
-// }
-// else
-// {
-//     alert('Shir ureyi meslehetdi!');
-// }
+// 3cü misal
+else if (ex == 3) {
 
-/*
-let b=8,a='8';
-console.log(b==a);
-console.log(b!=a);
-console.log(b===a);
-console.log(b!==a);
+    let season = prompt("fəsil seçin (yaz, yay, qis, payiz): ");
+    season = season.toLowerCase();
 
-var name=false;
-console.log(name);
+    if (season == "yaz") {
+        alert("Mart, Aprel, May");
+    } else if (season == "yay") {
+        alert("Iyun, Iyul, Avqust");
+    } else if (season == "payiz" || season == "payız") {
+        alert("Sentyabr, Oktyabr, Noyabr");
+    } else if (season == "qis" || season == "qış") {
+        alert("Dekabr, Yanvar, Fevral");
+    } else {
+        alert("Fəsil adını düzgün daxil etiyinizdən əmin olun");
+    }
 
-console.log(Math.pow(4,0.5));
-
-*/
-// ++b; b=b+1;
-// --b; b=b-1;
-// b+=2; b=b+2;
-// b-=2; b=b-2;
-// b*=2; //b=b*2;
-// b/=2; //b=b/2;
-// console.log("Netice: " + b);
-// var c=a==b;
-// console.log(c);
-// console.log('a>b?: ',(a>b));
-// console.log('a<b?: ',(a<b));
-// console.log('a=b?: ',(a==b));
-/*
-var _fullName='Senior is here!';
-var fullName='Senior is here!';
-var FirstName=">>Senior is here!";
-var $FirstName=">>Senior is here!";
-var name;
-document.write('<h1>|'+name+'|<h1>');
-console.log('<h1>|'+name+'|<h1>');
-
-document.write(_fullName);
-console.log(_fullName);
-
-document.write(fullName);
-console.log(fullName);
-
-document.write(FirstName);
-console.log(FirstName);
-
-document.write($FirstName);
-console.log($FirstName); */
+}
